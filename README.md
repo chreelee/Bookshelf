@@ -1,1 +1,8 @@
 # Bookshelf
+
+
+## Week 10
+A Book entity was created with attributes of Title, Author, Genre, Rating, and Pages. BookshelfContext was created once the Books page was scaffolded. The DbInitializer was updated to include a migration of Book objects to load into the database. In the Books pages, the database is displayed and the Book entities can be sorted through their attributes. Pages > Books > Index.cshtml provides the sorting options using a default Title sort and ascending and descending sorts for each attribute. A search bar with a searchString was also added to use the IQueryable LINQ method of Where() to search the string in the Title or Author attributes of the Book entities. CRUD actions are available for the Book database. A Statistics page is created in Pages to hold the count of Book entities as Books Completed, the distinct count of Authors as Authors, and the sum of all book Pages as Pages. To create this page, the StatisticsViewModel folder includes a Statistics model. In the Statistics.cshtml.cs, Entity Framework Core methods including Select(), Distinct(), CountAsync(), SumAsync() were used to gather the count and sum of Book entities, distinct Authors, and the sum of all Book entity pages. Once gathered, this information was updated to a new BookStatistics model. Then, this data was displayed in a table in Statistics.cshtml using the page's BookStatistics model similar to Pages > Books > Indexcshtml.cs.
+
+## Summary from week 9:
+For week 9, the project I decided on was to create a personal book log that will allow a reader to log their books, details, and ratings into a database. This database will hold all of the entered book information and will be searchable by varying criteria including rating, genre, and author.
